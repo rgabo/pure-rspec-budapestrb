@@ -637,6 +637,25 @@
 # Stupid RSpec Tricks!
 
 
+!SLIDE smaller
+# Stupid RSpec Trick:  `unstub` ########################################
+
+    @@@ ruby
+
+    describe BlogPost do
+      # defined in class as...
+      # def self.max_length; 42; end
+
+      before  { BlogPost.stub :max_length  => 13 }
+      specify { BlogPost.max_length.should == 13 }
+
+      context "original max length" do
+        before  { BlogPost.unstub :max_length }
+        specify { BlogPost.max_length.should == 42 }
+      end
+    end
+
+
 
 !SLIDE smaller
 # Stupid RSpec Trick:  `pending` before ################################
