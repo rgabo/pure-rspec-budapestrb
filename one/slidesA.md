@@ -676,6 +676,8 @@
 
     __END__
 
+      # nothing below here runs!
+
       it 'dices' do
         # ...
       end
