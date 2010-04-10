@@ -761,6 +761,7 @@
 * please love me on [SpeakerRate](http://speakerrate.com/talks/2918-pure-rspec)
 * watch the [Hashrocket Book Club](http://www.vimeo.com/album/179636), live-streamed on [justin.tv/hashrocket](http://www.justin.tv/hashrocket/) every Tuesday at 12:12pm ET
 * [The Hashrocket Way](http://hashrocket.com/culture/university/) training at RailsConf, by Jumpstart Lab
+* [pure-rspec-rubynation.heroku.com](http://pure-rspec-rubynation.heroku.com/)
 
 <br />
 <br />
