@@ -1,36 +1,16 @@
 !SLIDE center
 # Pure RSpec ###########################################################
 
-## Jon "Lark" Larkowski
-## @L4rk
+## Gabor Ratky
+### courtesy of Jon "Lark" Larkowski
+### @L4rk
 
+## budapest.rb
+### November 2010
+
+![SSP logo](SSP.png)
 <br />
-
-## RubyNation
-## April 2010
-
-<br />
-<br />
-
 ![Hashrocket logo](hashrocket_logo.png)
-
-
-!SLIDE center
-# Pure RSpec USA! ######################################################
-
-## Jon "Lark" Larkowski
-## @L4rk
-
-<br />
-
-## RubyNation
-## April 2010
-
-<br />
-<br />
-
-![Hashrocket logo](hashrocket_logo.png)
-
 
 !SLIDE bullets incremental
 # Format of This Talk ##################################################
@@ -38,7 +18,7 @@
 * syntax
 * syntax
 * (more syntax)
-* stupid RSpec tricks!
+* (not so) stupid RSpec tricks!
 
 
 !SLIDE bullets incremental small
@@ -768,7 +748,7 @@
 
 
 !SLIDE bullets incremental
-# My Secret ###########################################################
+# <del>My</del> Jon's Secret ###########################################################
 
 * `bundle open rspec`
 * *History.rdoc*
@@ -776,15 +756,13 @@
 
 
 !SLIDE bullets center smaller
-# Pure RSpec USA! ######################################################
+# Thanks! ######################################################
 
-* Jon "Lark" Larkowski, @L4rk
-* please love me on [SpeakerRate](http://speakerrate.com/talks/2918-pure-rspec)
-* watch the [Hashrocket Book Club](http://www.vimeo.com/album/179636), live-streamed on [justin.tv/hashrocket](http://www.justin.tv/hashrocket/) every Tuesday at 12:12pm ET
-* [The Hashrocket Way](http://hashrocket.com/culture/university/) training at RailsConf, by Jumpstart Lab
-* [pure-rspec-rubynation.heroku.com](http://pure-rspec-rubynation.heroku.com/)
+* Gabor Ratky, [@rgabo](http://twitter.com/rgabo)
+* [Secret Sauce Partners, Inc.](http://secretsaucepartners.com)
+* [pure-rspec-budapestrb.heroku.com](http://pure-rspec-budapestrb.heroku.com/) (this presentation)
 
 <br />
 <br />
 
-![Hashrocket logo](hashrocket_logo.png)
+![SSP logo](SSP.png)
