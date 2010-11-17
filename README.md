@@ -1,13 +1,18 @@
-Pure RSpec USA!
-===============
+Pure RSpec budapest.rb!
+=======================
 
-My presentation at the RubyNation conference, April 10, 2010.
+This a fork of Jon "L4rk" Larkowski's presentation at the RubyNation conference, April 10, 2010 represented at November 18, 2010 at the budapest.rb Ruby Meetup in Budapest, Hungary.
 
+How cool is that? A presentation forked.
+
+All credit is due @L4rk for showing me and others the Pure RSpec way. I'm just spreading the word.
+
+**Because once you go Pure RSpec, you'll always have DRY spec.**
 
 Description
 -----------
 
-Code cleaner RSpec using the latest features and patterns:  let, subject,
+Code cleaner RSpec using the latest features and patterns: let, subject,
 shared examples, shoulda, and more.
 
 
