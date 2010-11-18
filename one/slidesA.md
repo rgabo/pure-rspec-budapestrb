@@ -24,10 +24,10 @@
 !SLIDE bullets incremental small
 # Why Syntax? ##########################################################
 
-* I noticed I was different from the other kids.
 * What problem is being solved here?
+* Ruby allows for very expressive code.
 * One reason to use RSpec is its readability.
-* The latest syntactic sugar makes RSpec both more readable (more sexy).
+* The syntactic sugar makes RSpec both more readable (and more sexy).
 * Code is read much more than written.
 * Readability matters, so...
 
@@ -59,7 +59,7 @@
 
 
 !SLIDE smaller
-# Instance Variable, Shminstance Shmvariable ###########################
+# Local Variables, Instance Variables ###########################
 
     @@@ ruby
     # it all starts simply enough...
@@ -72,7 +72,7 @@
     end
 
 !SLIDE smaller
-# Instance Variable, Shminstance Shmvariable
+# Local Variables, Instance Variables
 
     @@@ ruby
     # but then comes the duplication...
@@ -90,7 +90,7 @@
     end
 
 !SLIDE smaller
-# Instance Variable, Shminstance Shmvariable
+# Local Variables, Instance Variables
 
     @@@ ruby
     # so you refactor to instance variables...
@@ -110,7 +110,7 @@
     end
 
 !SLIDE smaller
-# Instance Variable, Shminstance Shmvariable
+# Local Variables, Instance Variables
 
     @@@ ruby
     # ...let there be let!
@@ -129,10 +129,11 @@
 
 
 !SLIDE bullets incremental
-# Instance Variable, Shminstance Shmvariable ###########################
+# Local Variables, Instance Variables ###########################
 
 * `let` makes an instance method, returns lazily-evaluated block
 * `let` shows you who the players are
+* `let!` evaluates the block immediately
 * gets rid of the `before` block
 
 
@@ -152,7 +153,7 @@
 
     @@@ ruby
 
-    # you can override `subject`
+    # you can override subject
 
     describe BlogPost do
       subject { BlogPost.new :title => 'foo', :body => 'bar' }
@@ -165,7 +166,7 @@
 
     @@@ ruby
 
-    # you have `subject` available
+    # you have subject available
 
     describe BlogPost do
       subject { BlogPost.new :title => 'foo', :body => 'bar' }
@@ -212,8 +213,7 @@
 * converts your Ruby to specdoc in English!
 * `BlogPost - should not be published`
 * use it when Ruby already reads like English
-* thanks to Philippe Creux [blog post](http://eggsonbread.com/2010/03/28/my-rspec-best-practices-and-tips/)
-
+* `it`, `specify` are just aliases of `example`
 
 
 !SLIDE small
@@ -250,6 +250,27 @@
       its(:title) { should == 'foo' }
       its(:body) { should == 'bar' }
       its(:published_on) { should == Date.today }
+    end
+
+!SLIDE smaller
+# `its`
+
+    @@@ ruby
+
+    describe BlogPost do
+      let(:author) { Author.new :name => 'Gabor Ratky' }
+      subject { BlogPost.new :author => author }
+
+      its('author.name') { should == 'Gabor Ratky'}
+    end
+
+    describe Hash do
+      subject do
+        { :foo => 'bar', 'baz' => 'qux' }
+      end
+
+      its([:foo]) { should == 'bar' }
+      its(['baz']) { should == 'qux' }
     end
 
 !SLIDE small
@@ -336,14 +357,15 @@
     end
 
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental small
 # shoulda
 
 * comes from the land of Test::Unit
-* powerful/handy/high-level macros
-* many matchers now available in RSpec
+* `context` and `should` test blocks in Test::Unit
+* Test::Unit and RSpec-compatible Rails matchers
 * validate_presence_of, validate_format_of, ensure_length_of,
-  have_many...
+  belong_to, have_many...
+* assign_to, respond_with, render_template, set_the_flash
 * just add a shoulda gem dependency
 
 
@@ -444,6 +466,7 @@
 * express shared behaviors in a compact way
 * reuse sets of examples
 * don't repeat yourself
+* *can make your code harder to follow*
 
 
 !SLIDE
